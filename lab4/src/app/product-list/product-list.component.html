@@ -5,6 +5,16 @@
     {{ product.name }}
     </a>
   </h3>
+  <img src="{{ product.image }}" width="200">
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+  <p *ngIf="product.rating">
+    Rating: {{ product.rating }}
+  </p>
+  <button type="button" (click)="share()">
+    Share
+  </button>
 </div>
 
 <!--
