@@ -1,0 +1,83 @@
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+}
+
+export const products = [
+  {
+    id: 1,
+    name: 'iPhone 12',
+    price: 323670,
+    rating: '5/5',
+    link:"https://kaspi.kz/shop/p/apple-iphone-12-64gb-chernyi-100656839/?c=750000000#!/item",
+    image:'https://resources.cdn-kaspi.kz/shop/medias/sys_mas…e-iphone-12-64gb-cernyj-100656839-1-Container.jpg',
+    description: 'Смартфон Apple iPhone 12 64Gb черный'
+  },
+  {
+    id: 2,
+    name: 'iPhone 12 Pro',
+    price: 551000,
+    rating: '4.8/5',
+    link:'https://kaspi.kz/shop/p/apple-iphone-12-pro-128gb-sinii-100657202/?c=750000000#!/item',
+    image:'https://resources.cdn-kaspi.kz/shop/medias/sys_mas…hone-12-pro-128gb-sinij-100657202-1-Container.jpg',
+    description: 'Смартфон Apple iPhone 12 Pro 128Gb синий'
+  },
+  {
+    id: 3,
+    name: 'iPhone 12 Pro Max',
+    price: 666666,
+    rating: '4.9/5',
+    link: "https://kaspi.kz/shop/p/apple-iphone-12-pro-max-128gb-sinii-100658112/?c=750000000#!/item",
+    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_mas…-12-pro-max-128gb-sinij-100658112-1-Container.jpg",
+    description: "Смартфон Apple iPhone 12 Pro Max 128Gb синий"
+  },
+  {
+    id: 4,
+    name: 'iPhone 13',
+    price: 384000,
+    rating: '5/5',
+    link:"https://kaspi.kz/shop/p/apple-iphone-13-128gb-chernyi-102298404/?c=750000000#!/item",
+    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_mas…-iphone-13-128gb-cernyj-102298404-1-Container.jpg",
+    description: 'Смартфон Apple iPhone 13 128Gb черный'
+  },
+  {
+    id: 5,
+    name: 'iPhone 13 Pro',
+    price: 384000,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/apple-iphone-13-128gb-chernyi-102298404/?c=750000000#!/item",
+    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_mas…-iphone-13-128gb-cernyj-102298404-1-Container.jpg",
+    description: "Смартфон Apple iPhone 13 128Gb черный"
+  },
+  {
+    id: 6,
+    name: 'iPhone 13 Pro Max',
+    price: 667130,
+    rating: '5/5',
+    link:"https://kaspi.kz/shop/p/apple-iphone-13-pro-max-128gb-zelenyi-104079084/?c=750000000#!/item",
+    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_mas…e-iphone-13-pro-max-128gb-zelenyj-104079084-1.jpg\n",
+    description: "Смартфон Apple iPhone 13 Pro Max 128Gb зеленый"
+  },
+  {
+    id: 7,
+    name: 'iPhone 14',
+    price: 299,
+    rating: '5/5',
+    link:"https://kaspi.kz/shop/p/apple-iphone-14-128gb-goluboi-106363150/?c=750000000#!/item",
+    image:'https://resources.cdn-kaspi.kz/shop/medias/sys_mas…630/apple-iphone-14-128gb-goluboj-106363150-1.jpg',
+    description: 'Смартфон Apple iPhone 14 128Gb голубой'
+  },
+  {
+    id: 6,
+
+  }
+];
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
