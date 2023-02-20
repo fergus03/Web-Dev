@@ -12,9 +12,11 @@
   <p *ngIf="product.rating">
     Rating: {{ product.rating }}
   </p>
-  <button type="button" (click)="share()">
-    Share
-  </button>
+  <a *ngIf="product" href="https://telegram.me/share/url?url={{product.link}}&text={{product.name}}">
+    <button type="button" (click)="share()">
+      Share
+    </button>
+  </a>
 </div>
 
 <!--
