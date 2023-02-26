@@ -13,7 +13,8 @@ export const products = [
     rating: '4.8/5',
     link: "https://kaspi.kz/shop/p/apple-iphone-11-128gb-slim-box-chernyi-100692388/?c=750000000#!/item",
     image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h17/h14/31489167425566/apple-iphone-11-128gb-slim-box-cernyj-100692388-1-Container.jpg",
-    description: "Смартфон Apple iPhone 11 128Gb Slim Box черный"
+    description: "Смартфон Apple iPhone 11 128Gb Slim Box черный",
+    category: 1
   },
   {
     id: 2,
@@ -22,7 +23,8 @@ export const products = [
     rating: '4.9/5',
     link: "https://kaspi.kz/shop/p/apple-iphone-11-pro-64gb-seryi-1005129/?c=750000000#!/item",
     image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h49/hbd/32284847439902/apple-iphone-11-pro-64gb-seryj-1005129-1-Container.jpg",
-    description: "Смартфон Apple iPhone 11 Pro 64Gb серый"
+    description: "Смартфон Apple iPhone 11 Pro 64Gb серый",
+    category: 1
   },
   {
     id: 3,
@@ -31,7 +33,8 @@ export const products = [
     rating: '5/5',
     link:"https://kaspi.kz/shop/p/apple-iphone-12-64gb-chernyi-100656839/?c=750000000#!/item",
     image:'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hfa/h97/33279114575902/apple-iphone-12-64gb-cernyj-100656839-1-Container.jpg',
-    description: 'Смартфон Apple iPhone 12 64Gb черный'
+    description: 'Смартфон Apple iPhone 12 64Gb черный',
+    category: 1
   },
   {
     id: 4,
@@ -40,7 +43,8 @@ export const products = [
     rating: '4.8/5',
     link:'https://kaspi.kz/shop/p/apple-iphone-12-pro-128gb-sinii-100657202/?c=750000000#!/item',
     image:'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h7b/h78/33276489170974/apple-iphone-12-pro-128gb-sinij-100657202-1-Container.jpg',
-    description: 'Смартфон Apple iPhone 12 Pro 128Gb синий'
+    description: 'Смартфон Apple iPhone 12 Pro 128Gb синий',
+    category: 1
   },
   {
     id: 5,
@@ -49,61 +53,158 @@ export const products = [
     rating: '4.9/5',
     link: "https://kaspi.kz/shop/p/apple-iphone-12-pro-max-128gb-sinii-100658112/?c=750000000#!/item",
     image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h87/h8c/32680476966942/apple-iphone-12-pro-max-128gb-sinij-100658112-1-Container.jpg",
-    description: "Смартфон Apple iPhone 12 Pro Max 128Gb синий"
+    description: "Смартфон Apple iPhone 12 Pro Max 128Gb синий",
+    category: 1
   },
   {
     id: 6,
-    name: 'iPhone 13',
-    price: 384000,
-    rating: '5/5',
-    link:"https://kaspi.kz/shop/p/apple-iphone-13-128gb-chernyi-102298404/?c=750000000#!/item",
-    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h49/hc0/46392662523934/apple-iphone-13-128gb-cernyj-102298404-1-Container.jpg",
-    description: 'Смартфон Apple iPhone 13 128Gb черный'
+    name: 'Тональная сыворотка Loreal',
+    price: 6970,
+    rating: '4.5/5',
+    link:"https://kaspi.kz/shop/p/loreal-professionnel-paris-alliance-perfect-nude-tonal-naja-syvorotka-0-5-2-30-ml-105110293/?c=750000000#!/item",
+    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h90/he6/51197296410654/l-oreal-syvorotka-tonalnaa-alliance-perfect-0-5-2-105110293-1.jpg",
+    description: 'Loreal Professionnel Paris Alliance Perfect Nude тональная сыворотка №0.5-2 30 мл',
+    category: 2
   },
   {
     id: 7,
-    name: 'iPhone 13 Pro',
-    price: 384000,
+    name: 'Блеск для губ',
+    price: 25900,
     rating: '5/5',
-    link: "https://kaspi.kz/shop/p/apple-iphone-13-pro-256gb-zelenyi-104079046/?c=750000000#!/item",
-    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h57/h60/49319350337566/apple-iphone-13-pro-256gb-zelenyj-104079046-1.jpg",
-    description: "Смартфон Apple iPhone 13 Pro 128Gb зеленый"
+    link: "https://kaspi.kz/shop/p/dior-addict-lip-maximizer-blesk-dlja-gub-rozovyi-010-106250822/?c=750000000#!/item",
+    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hfa/h74/62085382438942/dior-addict-lip-maximizer-blesk-dla-gub-rozovyj-010010-rozovyj-golograficeskij-106250822-1.jpg",
+    description: "Dior Addict Lip Maximizer блеск для губ розовый 010",
+    category: 2
   },
   {
     id: 8,
-    name: 'iPhone 13 Pro Max',
-    price: 667130,
+    name: 'Румяна',
+    price: 4490,
     rating: '5/5',
-    link:"https://kaspi.kz/shop/p/apple-iphone-13-pro-max-128gb-zelenyi-104079084/?c=750000000#!/item",
-    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hc8/heb/49319414399006/apple-iphone-13-pro-max-128gb-zelenyj-104079084-1.jpg",
-    description: "Смартфон Apple iPhone 13 Pro Max 128Gb зеленый"
+    link:"https://kaspi.kz/shop/p/shik-perfect-liquid-blush-rumjana-02-102258965/?c=750000000#!/item",
+    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h4a/hdd/45412101586974/shik-perfect-liquid-blush-02-new-102258965-1-Container.jpg",
+    description: "Shik Perfect Liquid Blush румяна 02",
+    category: 2
   },
   {
     id: 9,
-    name: 'iPhone 14',
-    price: 558400,
+    name: 'Консилер',
+    price: 5645,
     rating: '5/5',
-    link:"https://kaspi.kz/shop/p/apple-iphone-14-128gb-goluboi-106363150/?c=750000000#!/item",
-    image:'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h8b/h41/63073057177630/apple-iphone-14-128gb-goluboj-106363150-1.jpg',
-    description: 'Смартфон Apple iPhone 14 128Gb голубой'
+    link:"https://kaspi.kz/shop/p/loreal-paris-true-match-the-one-1n-ivoire-38600180/?c=750000000#!/item",
+    image:'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hbc/ha2/31741218127902/l-oreal-paris-true-match-the-one-1n-ivoire-38600180-1.jpg',
+    description: 'Loreal Paris True Match The One 1N Ivoire',
+    category: 2
   },
   {
     id: 10,
-    name: 'iPhone 14 Pro',
-    price: 644206,
-    rating: '5/5',
-    link: "https://kaspi.kz/shop/p/apple-iphone-14-pro-256gb-fioletovyi-106363319/?c=750000000#!/item",
-    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h4d/h62/62948396728350/apple-iphone-14-pro-128gb-fioletovyj-106363319-1.jpg",
-    description: "Смартфон Apple iPhone 14 Pro 256Gb фиолетовый"
+    name: 'Спонж',
+    price: 2500,
+    rating: '4/5',
+    link: "https://kaspi.kz/shop/p/shik-belyi-sponzh-1-sht-100206674/?c=750000000#!/item",
+    image: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/ha6/h03/66804573929502/shik-belyi-sponzh-1-sht-100206674-1.jpg",
+    description: "Shik белый спонж 1 шт",
+    category: 2
   },
   {
     id: 11,
-    name: 'iPhone 14 Pro Max',
-    price:701558,
-    rating: '4.8/5',
-    link: "https://kaspi.kz/shop/p/apple-iphone-14-pro-max-256gb-fioletovyi-106363342/?c=750000000#!/item",
-    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h00/h18/62948780834846/apple-iphone-14-pro-max-128gb-fioletovyj-106363342-1.jpg",
-    description: "Смартфон Apple iPhone 14 Pro Max 256Gb фиолетовый"
+    name: 'Скраб для тела',
+    price: 5300,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/the-act-detoks-antitselljulitnyi-skrab-dlja-tela-s-gimalaiskoi-sol-ju-300-ml-104104028/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h4e/h8a/49353615704094/detoks-anticellulitnyj-skrab-dla-tela-s-gimalajskoj-solu-104104028-1.jpg",
+    description: "The Act Детокс антицеллюлитный скраб для тела с гималайской солью 300 мл",
+    category: 3
+  },
+  {
+    id: 11,
+    name: 'Масло для тела',
+    price: 7500,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/the-act-coconut-body-butter-maslo-dlja-tela-170-g-104403423/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h47/h09/49907897827358/krem-batter-dla-tela-kokos-104403423-1.jpg",
+    description: "The Act coconut body butter масло для тела 170 г",
+    category: 3
+  },
+  {
+    id: 11,
+    name: 'Крем для тела',
+    price: 16500,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/hempz-original-krem-dlja-tela-500-ml-101346239/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hf3/h94/63040642809886/hempz-body-cream-original-500-ml-101346239-1-Container.jpg",
+    description: "Hempz Original крем для тела 500 мл",
+    category: 3
+  },
+  {
+    id: 11,
+    name: 'Мист для тела',
+    price: 12998,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/victoria-s-secret-bare-vanilla-mist-dlja-tela-250-ml-104992551/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hc1/hae/65226952179742/victoria-s-secret-bare-vanilla-parfyumirovannyi-sprei-dlya-tela-250-ml-104992551-1.jpg",
+    description: "Victoria’s Secret Bare vanilla мист для тела 250 мл",
+    category: 3
+  },
+  {
+    id: 11,
+    name: 'Масло для волос',
+    price: 11990,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/zere-pure-beauty-dlja-rosta-i-gustoty-volos-maslo-100-ml-100791124/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h57/hcf/49877927067678/zere-pure-beauty-dla-rosta-i-gustoty-volos-100-ml-100791124-1-Container.jpg",
+    description: "ZERE PURE BEAUTY Для роста и густоты волос масло 100 мл",
+    category: 3
+  },
+  {
+    id: 11,
+    name: 'Ноутбук Apple MacBook Pro',
+    price: 697630,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/apple-macbook-pro-13-mneh3-seryi-105514238/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h59/h17/51918242742302/apple-macbook-pro-13-mneh3-seryi-105514238-4.jpg",
+    description: "Ноутбук Apple MacBook Pro 13 MNEH3 серый",
+    category: 4
+  },
+  {
+    id: 11,
+    name: 'Apple Watch',
+    price: 228700,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/apple-watch-series-8-41-mm-aluminum-zolotistyi-106585035/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h60/hfa/63158666461214/apple-watch-series-8-41-mm-aluminum-zolotistyj-106585035-1.jpg",
+    description: "Смарт-часы Apple Watch Series 8 41 мм Aluminum золотистый",
+    category: 4
+  },
+  {
+    id: 11,
+    name: 'Apple AirPods Max',
+    price: 361279,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/apple-airpods-max-sinii-101180956/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hf7/h99/46659800530974/apple-airpods-max-sinij-101180956-1-Container.jpg",
+    description: "Наушники Apple AirPods Max синий",
+    category: 4
+  },
+  {
+    id: 11,
+    name: 'Фотокамера',
+    price: 779990,
+    rating: '4/5',
+    link: "https://kaspi.kz/shop/p/fujifilm-x100v-chernyi-serebristyi-101610518/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hea/h13/34163167559710/fujifilm-x100v-cernyj-serebristyj-101610518-1.jpg",
+    description: "Фотокамера Fujifilm X100V черный-серебристый",
+    category: 4
+  },
+  {
+    id: 11,
+    name: 'Яндекс станция',
+    price: 44460,
+    rating: '5/5',
+    link: "https://kaspi.kz/shop/p/jandeks-stantsija-mini-2-s-chasami-sinii-103877977/?c=750000000#!/item",
+    image:"https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h85/h07/49342277910558/yandeks-mini-2-yndx-00020-sinii-103877977-1.jpg",
+    description: "Умная колонка Яндекс Станция Мини 2 с часами синий",
+    category: 4
   }
 ];
 
