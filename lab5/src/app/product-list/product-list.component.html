@@ -1,7 +1,7 @@
 <div>
   <h1>Products</h1>
   <div *ngFor="let product of products">
-    <div *ngIf="product.category == categoryId">
+    <div  *ngIf="product.category == categoryId">
       <h3>
         <a [title]="product.name + ' details'" href="{{ product.link }}">
           {{ product.name }}
