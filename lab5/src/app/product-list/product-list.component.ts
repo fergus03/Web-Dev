@@ -12,16 +12,16 @@ export class ProductListComponent implements OnInit{
   // @ts-ignore
   public categoryId: number;
   constructor(private route: ActivatedRoute) { }
-  share() {
-    window.alert('The product has been shared!');
-  }
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
-  }
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
     this.categoryId = Number(routeParams.get('categoryId'));
+  }
+  onProductRemove(product: any){
+    const index: number = this.products.indexOf(product);
+    if(index != -1){
+      this.products.splice(index, 1);
+    }
   }
 }
 
