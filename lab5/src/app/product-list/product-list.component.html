@@ -1,5 +1,22 @@
 <div>
   <h1>Products</h1>
-  <app-product-item [categoryId]="categoryId"></app-product-item>
+  <div *ngFor="let product of products">
+    <div *ngIf="product.category == categoryId">
+      <h3>
+        <a [title]="product.name + ' details'" href="{{ product.link }}">
+          {{ product.name }}
+        </a>
+      </h3>
+      <img src="{{ product.image }}" width="200">
+      <p *ngIf="product.description">
+        Description: {{ product.description }}
+      </p>
+      <p *ngIf="product.rating">
+        Rating: {{ product.rating }}
+      </p>
+      <app-product-item [product]="product" (remove)="onProductRemove($event)"></app-product-item>
+      <p>Likes: {{ product.like }}</p>
+    </div>
+  </div>
 </div>
 
