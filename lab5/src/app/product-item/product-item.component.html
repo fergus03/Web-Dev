@@ -23,7 +23,7 @@
       (notify)="onNotify()">
     </app-product-alerts>
 
-    <p><button>Remove</button></p>
+    <p><button type="button" (click)="remove(product)">Remove</button></p>
     <p><button type="button" (click)="like(product)">Like</button></p>
     <p>Likes: {{ product.like }}</p>
   </div>
