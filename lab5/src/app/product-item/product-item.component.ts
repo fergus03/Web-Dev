@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { products } from '../products';
+import {Product, products} from '../products';
 
 @Component({
   selector: 'app-product-item',
@@ -16,5 +16,8 @@ export class ProductItemComponent {
   }
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+  like(product: Product){
+    product.like += 1;
   }
 }
