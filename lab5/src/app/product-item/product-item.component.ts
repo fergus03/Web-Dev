@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { products } from '../products';
 
@@ -9,6 +9,8 @@ import { products } from '../products';
 })
 export class ProductItemComponent {
   products = products;
+  // @ts-ignore
+  @Input() categoryId: number;
   share() {
     window.alert('The product has been shared!');
   }
