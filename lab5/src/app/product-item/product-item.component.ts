@@ -20,4 +20,10 @@ export class ProductItemComponent {
   like(product: Product){
     product.like += 1;
   }
+  remove(product: any) : void{
+    const index: number = this.products.indexOf(product);
+    if(index != -1){
+      this.products.splice(index, 1);
+    }
+  }
 }
