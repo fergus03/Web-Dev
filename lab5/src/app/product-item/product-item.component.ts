@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
-import {Product, products} from '../products';
+import { Product, products} from '../products';
 
 @Component({
   selector: 'app-product-item',
@@ -11,19 +11,18 @@ export class ProductItemComponent {
   products = products;
   // @ts-ignore
   @Input() categoryId: number;
+  @Input() product: Product | undefined;
+  @Output() remove = new EventEmitter();
   share() {
     window.alert('The product has been shared!');
   }
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
-  like(product: Product){
+  like(product: any){
     product.like += 1;
   }
-  remove(product: any) : void{
-    const index: number = this.products.indexOf(product);
-    if(index != -1){
-      this.products.splice(index, 1);
-    }
+  removeProduct(){
+    this.remove.emit(this.product);
   }
 }
