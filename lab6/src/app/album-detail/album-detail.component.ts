@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ALBUMS} from "../fake-db";
 import {Album} from "../models";
+import {AlbumsService} from "../albums.service";
 
 @Component({
   selector: 'app-album-detail',
@@ -10,7 +11,8 @@ import {Album} from "../models";
 })
 export class AlbumDetailComponent {
   album: Album;
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+              private albumService: AlbumsService) {
     this.album = {} as Album;
   }
 
@@ -18,7 +20,10 @@ export class AlbumDetailComponent {
     //const id = Number(this.route.snapshot.paramMap.get('id'));
     this.route.paramMap.subscribe((params) => {
       const id = Number(params.get('id'));
-      this.album = ALBUMS.find((album) => album.id === id) as Album;
+      //this.album = ALBUMS.find((album) => album.id === id) as Album;
+      this.albumService.getAlbum(id).subscribe((album) => {
+        this.album = album;
+      });
     })
   }
 }
