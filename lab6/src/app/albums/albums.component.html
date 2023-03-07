@@ -1,8 +1,8 @@
 <h2>Albums list</h2>
 
 <fieldset>
-  <input type="text">
-  <button>Add album</button>
+  <input type="text" [(ngModel)]="newAlbum.title">
+  <button (click)="addAlbum()">Add album</button>
 </fieldset>
 
 <ul *ngIf="loaded">
