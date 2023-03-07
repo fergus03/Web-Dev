@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Album} from "../models";
 import {ALBUMS} from "../fake-db";
+import {AlbumsService} from "../albums.service";
 
 @Component({
   selector: 'app-albums',
@@ -9,10 +10,13 @@ import {ALBUMS} from "../fake-db";
 })
 export class AlbumsComponent {
   albums: Album[];
-  constructor() {
+  constructor(private albumService: AlbumsService) {
     this.albums = [];
   }
   ngOnInit(): void{
-    this.albums = ALBUMS;
+    //this.albums = ALBUMS;
+    this.albumService.getAlbums().subscribe((albums) => {
+      this.albums = albums;
+    });
   }
 }
