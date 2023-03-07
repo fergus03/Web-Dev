@@ -10,9 +10,11 @@ import {AlbumsService} from "../albums.service";
 })
 export class AlbumsComponent {
   albums: Album[];
+  newAlbum: Album;
   loaded: boolean;
   constructor(private albumService: AlbumsService) {
     this.albums = [];
+    this.newAlbum = {} as Album;
     this.loaded = true;
   }
   ngOnInit(): void{
