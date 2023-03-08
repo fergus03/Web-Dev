@@ -4,6 +4,17 @@
 
   <h4>{{album.title}}</h4>
 
+  <p>Edit title</p>
+  <label>
+    <input input="text" [(ngModel)]="name">
+  </label>
+  <br>
+  <div>
+    <button (click)="updateAlbum()">Save</button>
+  </div>
+  <div>
+    <button (click)="goBack()">Go back</button>
+  </div>
 </div>
 <h3 *ngIf="!loaded">
   Album item is loaded...
