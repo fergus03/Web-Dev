@@ -12,6 +12,8 @@ import {AlbumsService} from "../albums.service";
 export class AlbumDetailComponent {
   album: Album;
   loaded: boolean;
+  // @ts-ignore
+  name: string;
   constructor(private route: ActivatedRoute,
               private albumService: AlbumsService) {
     this.album = {} as Album;
@@ -19,6 +21,9 @@ export class AlbumDetailComponent {
   }
 
   ngOnInit(): void{
+    this.getAlbum();
+  }
+  getAlbum(): void{
     //const id = Number(this.route.snapshot.paramMap.get('id'));
     this.route.paramMap.subscribe((params) => {
       const id = Number(params.get('id'));
@@ -28,6 +33,14 @@ export class AlbumDetailComponent {
         this.album = album;
         this.loaded =  true;
       });
+    })
+  }
+  updateAlbum(): void{
+    this.loaded = false;
+    this.albumService.updateAlbum(this.album).subscribe((album) => {
+      console.log(album);
+      this.album.title = this.name;
+      this.loaded = true;
     })
   }
 }
