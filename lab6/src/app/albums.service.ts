@@ -23,4 +23,7 @@ export class AlbumsService {
   deleteAlbum(id: number): Observable<any>{
     return this.client.delete(`${this.BASE_URL}/albums/${id}`);
   }
+  updateAlbum(album: Album): Observable<Album>{
+    return this.client.put<Album>(`${this.BASE_URL}/albums/${album.id}`, album);
+  }
 }
