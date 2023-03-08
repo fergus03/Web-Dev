@@ -7,7 +7,7 @@ import {Album} from "./models";
   providedIn: 'root'
 })
 export class AlbumsService {
-  BASE_URL = 'https://jsonplaceholder.typicode.com';
+  BASE_URL: string = 'https://jsonplaceholder.typicode.com';
 
   constructor(private client: HttpClient) { }
 
@@ -16,5 +16,8 @@ export class AlbumsService {
   }
   getAlbum(id: number): Observable<Album>{
     return this.client.get<Album>(`${this.BASE_URL}/albums/${id}`)
+  }
+  addAlbum(album: Album): Observable<Album>{
+    return this.client.post<Album>(`${this.BASE_URL}/albums`, album);
   }
 }
