@@ -29,6 +29,11 @@ export class AlbumsComponent {
     });
   }
   addAlbum(){
-
+    this.loaded = false;
+    this.albumService.addAlbum(this.newAlbum).subscribe((album) => {
+      this.albums.push(album);
+      this.loaded = true;
+      this.newAlbum = {} as Album;
+    })
   }
 }
