@@ -36,4 +36,10 @@ export class AlbumsComponent {
       this.newAlbum = {} as Album;
     })
   }
+  deleteAlbum(id: number): void{
+    this.albums = this.albums.filter((x) => x.id !== id);
+    this.albumService.deleteAlbum(id).subscribe(() => {
+      console.log('deleted', id);
+    })
+  }
 }
