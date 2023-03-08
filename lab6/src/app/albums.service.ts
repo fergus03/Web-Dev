@@ -26,4 +26,7 @@ export class AlbumsService {
   updateAlbum(album: Album): Observable<Album>{
     return this.client.put<Album>(`${this.BASE_URL}/albums/${album.id}`, album);
   }
+  getAlbumPhotos(id: number): Observable<any>{
+    return this.client.get(`${this.BASE_URL}/albums/${id}/photos`)
+  }
 }
