@@ -13,7 +13,10 @@
     <button (click)="updateAlbum()">Save</button>
   </div>
   <div>
-    <button (click)="goBack()">Go back</button>
+    <a routerLink="photos">Photos</a>
+  </div>
+  <div>
+    <button (click)="returnBack()">Return back</button>
   </div>
 </div>
 <h3 *ngIf="!loaded">
