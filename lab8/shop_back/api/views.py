@@ -11,3 +11,10 @@ def product_detail(request, product_id):
     product = Product.objects.get(id=product_id)
     return JsonResponse(product.to_json(), json_dumps_params={'indent':2})
 
+def categories_list(request):
+    categories = Category.objects.all()
+    categories_json = [category.to_json() for category in categories]
+    return JsonResponse(categories_json, safe=False, json_dumps_params={'indent':2})
+
+
+
