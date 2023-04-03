@@ -16,5 +16,10 @@ def categories_list(request):
     categories_json = [category.to_json() for category in categories]
     return JsonResponse(categories_json, safe=False, json_dumps_params={'indent':2})
 
+def category_detail(request, category_id):
+    category = Category.objects.get(id=category_id)
+    return JsonResponse(category.to_json(), json_dumps_params={'indent':2})
+
+
 
 
