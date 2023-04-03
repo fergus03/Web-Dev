@@ -20,6 +20,11 @@ def category_detail(request, category_id):
     category = Category.objects.get(id=category_id)
     return JsonResponse(category.to_json(), json_dumps_params={'indent':2})
 
+def category_products(request, category_id):
+    products = Product.objects.all().filter(categoryId=category_id)
+    products_json = [product.to_json() for product in products]
+    return JsonResponse(products_json, safe=False, json_dumps_params={'indent':2})
+
 
 
 
