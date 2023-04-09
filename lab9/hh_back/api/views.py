@@ -13,3 +13,12 @@ def company_detail(request, company_id):
         return JsonResponse(company.to_json(), json_dumps_params={'indent': 2})
     except Company.DoesNotExist as e:
         return JsonResponse({'error': str(e)}, status=400)
+    
+def company_vacancies(request, company_id):
+    try:
+        company = Company.objects.get(id=company_id)
+        vacancies = company.vacancy_set.all()
+        vacancies_json = [v.to_json() for v in vacancies]
+        return JsonResponse(vacancies_json, safe=False, json_dumps_params={'indent': 2})
+    except Company.DoesNotExist as e:
+        return JsonResponse({'error': str(e)}, status=400)
