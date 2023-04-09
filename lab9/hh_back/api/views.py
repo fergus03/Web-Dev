@@ -34,3 +34,8 @@ def vacancy_detail(request, vacancy_id):
         return JsonResponse(vacancy.to_json(), json_dumps_params={'indent': 2})
     except Vacancy.DoesNotExist as e:
         return JsonResponse({'error': str(e)}, status=400)
+    
+def vacancies_top_ten(request):
+    vacancies = Vacancy.objects.all().order_by('-salary')[:10]
+    vacancies_json = [vacancy.to_json() for vacancy in vacancies]
+    return JsonResponse(vacancies_json, safe=False, json_dumps_params={'indent': 2})
