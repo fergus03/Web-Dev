@@ -22,3 +22,8 @@ def company_vacancies(request, company_id):
         return JsonResponse(vacancies_json, safe=False, json_dumps_params={'indent': 2})
     except Company.DoesNotExist as e:
         return JsonResponse({'error': str(e)}, status=400)
+    
+def vacancies_list(request):
+    vacancies = Vacancy.objects.all()
+    vacancies_json = [v.to_json() for v in vacancies]
+    return JsonResponse(vacancies_json, safe=False, json_dumps_params={'indent': 2})
