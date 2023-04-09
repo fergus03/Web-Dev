@@ -27,3 +27,10 @@ def vacancies_list(request):
     vacancies = Vacancy.objects.all()
     vacancies_json = [v.to_json() for v in vacancies]
     return JsonResponse(vacancies_json, safe=False, json_dumps_params={'indent': 2})
+
+def vacancy_detail(request, vacancy_id):
+    try:
+        vacancy = Vacancy.objects.get(id=vacancy_id)
+        return JsonResponse(vacancy.to_json(), json_dumps_params={'indent': 2})
+    except Vacancy.DoesNotExist as e:
+        return JsonResponse({'error': str(e)}, status=400)
