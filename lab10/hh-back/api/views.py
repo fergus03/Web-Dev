@@ -37,3 +37,12 @@ def company_detail(request, id):
     elif request.method == 'DELETE':
         company.delete()
         return JsonResponse({'deleted': True})
+
+ def company_vacancies(request, id):
+    try:
+        company = Company.objects.get(id=id)
+        vacancies = Vacancy.objects.filter(company=company)
+        vacancies_json = [v.to_json() for v in vacancies]
+        return JsonResponse(vacancies_json, safe=False)
+    except Company.DoesNotExist as e:
+        return JsonResponse({'error': str(e)})
