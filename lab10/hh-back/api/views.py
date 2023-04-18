@@ -46,3 +46,21 @@ def company_detail(request, id):
         return JsonResponse(vacancies_json, safe=False)
     except Company.DoesNotExist as e:
         return JsonResponse({'error': str(e)})
+    
+ @csrf_exempt
+def vacancy_list(request):
+    if request.method == 'GET':
+        vacancies = Vacancy.objects.all()
+        vacancies_serialized = VacancySerializer(vacancies, many=True)
+        return JsonResponse(vacancies_serialized.data, safe=False)
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        company_id = data.get('company_id')
+        try:
+            company = Company.objects.get(id=company_id)
+        except Company.DoesNotExist:
+            return JsonResponse({'error': 'Company not found'}, status=400)
+        vacancy = Vacancy.objects.create(name=data.get('name', ''), description=data.get('description', ''),
+                                         salary=data.get('salary', 0), company=company)
+        vacancy.save()
+        return JsonResponse(vacancy.to_json(), safe=False)
