@@ -64,3 +64,23 @@ def vacancy_list(request):
                                          salary=data.get('salary', 0), company=company)
         vacancy.save()
         return JsonResponse(vacancy.to_json(), safe=False)
+    
+@csrf_exempt
+def vacancy_detail(request, id):
+    try:
+        vacancy = Vacancy.objects.get(id=id)
+    except Vacancy.DoesNotExist as e:
+        return JsonResponse({'error': str(e)})
+    if request.method == 'GET':
+        return JsonResponse(vacancy.to_json(), safe=False)
+    elif request.method == 'PUT':
+        data = json.loads(request.body)
+        vacancy.name = data.get('name', vacancy.name)
+        vacancy.description = data.get('description', vacancy.description)
+        vacancy.salary = data.get('salary', vacancy.salary)
+        vacancy.company = data.get('company', vacancy.company)
+        vacancy.save()
+        return JsonResponse(vacancy.to_json(), safe=False)
+    elif request.method == 'DELETE':
+        vacancy.delete()
+        return JsonResponse({'deleted': True})
