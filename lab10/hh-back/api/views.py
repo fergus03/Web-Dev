@@ -84,3 +84,8 @@ def vacancy_detail(request, id):
     elif request.method == 'DELETE':
         vacancy.delete()
         return JsonResponse({'deleted': True})
+    
+def top_ten(request):
+    vacancies = Vacancy.objects.order_by('-salary')[:10]
+    vacancies_json = [v.to_json() for v in vacancies]
+    return JsonResponse(vacancies_json, safe=False)
